@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/simosays/HackerNews/issues"
   },
-  "homepage": "https://github.com/simosays/HackerNews#readme"
+  "homepage": "https://github.com/simosays/HackerNews#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
