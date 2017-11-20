@@ -73,7 +73,7 @@ function getFullList(req, res, size) {
         }
         else {
             console.log("Failed to build item list")
-            itemlist = "[]";
+            itemlist = [];
         }
         res.send(itemlist);
     })
@@ -110,10 +110,10 @@ function getItemTitle(req, res, id) {
 }
 
 // Get all items
-app.get('/topten',  (req, res) => getFullList(req, res, 10))
+app.get('/topten',  (req, res) => getFullList(req, res, defaultsize))
 
 // Get all items
-app.get('/topten/titles',  (req, res) => getTitleList(req, res, 10))
+app.get('/topten/titles',  (req, res) => getTitleList(req, res, defaultsize))
 
 // Get one
 app.get('/item',  (req, res) => getItem(req, res, req.query.id))
